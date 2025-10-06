@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/button'
@@ -15,12 +16,6 @@ export const metadata: Metadata = {
 }
 
 export default function FireRecoveryPage() {
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -50,14 +45,18 @@ export default function FireRecoveryPage() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" onClick={scrollToContact} className="text-base px-8 py-6 h-auto bg-orange-600 hover:bg-orange-700">
-                    <Phone className="mr-2 h-4 w-4" />
-                    Emergency Consultation
-                  </Button>
-                  <Button variant="outline" size="lg" className="text-base px-8 py-6 h-auto">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Email Assessment Request
-                  </Button>
+                  <Link href="#contact">
+                    <Button size="lg" className="text-base px-8 py-6 h-auto bg-orange-600 hover:bg-orange-700">
+                      <Phone className="mr-2 h-4 w-4" />
+                      Emergency Consultation
+                    </Button>
+                  </Link>
+                  <Link href={`mailto:${COMPANY_INFO.email}?subject=Wildfire Damage Assessment Request`}>
+                    <Button variant="outline" size="lg" className="text-base px-8 py-6 h-auto">
+                      <Mail className="mr-2 h-4 w-4" />
+                      Email Assessment Request
+                    </Button>
+                  </Link>
                 </div>
               </FadeInSection>
             </div>
