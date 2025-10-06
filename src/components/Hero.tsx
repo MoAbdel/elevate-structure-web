@@ -133,13 +133,6 @@ export function Hero() {
               <AnimatedConstructionIcon />
 
               {/* Floating Elements */}
-              <div className="absolute top-4 left-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg z-30">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium">Licensed & Insured</span>
-                </div>
-              </div>
-
               <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg z-30">
                 <div className="text-center">
                   <div className="text-lg font-bold text-primary">24hr</div>
