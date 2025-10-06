@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { FAQ_DATA } from '@/lib/constants'
+import { FAQ_DATA, COMPANY_INFO } from '@/lib/constants'
 
 export function FAQ() {
   return (
@@ -75,7 +75,7 @@ export function FAQ() {
                 Get Free Consultation
               </button>
               <a
-                href="tel:+1 (555) 123-4567"
+                href={`tel:${COMPANY_INFO.phone}`}
                 className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
               >
                 Call Us Now

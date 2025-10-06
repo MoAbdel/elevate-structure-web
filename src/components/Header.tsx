@@ -30,7 +30,7 @@ export function Header() {
   return (
     <>
       {/* Wildfire Support Banner */}
-      <div className="bg-orange-600 text-white py-2 px-4 text-center text-sm">
+      <div className="sticky top-0 z-50 bg-orange-600 text-white py-2 px-4 text-center text-sm">
         <div className="container mx-auto max-w-7xl flex items-center justify-center gap-2">
           <Flame className="h-4 w-4" />
           <span>We&apos;re providing dedicated support to homeowners affected by the LA wildfires.</span>
@@ -40,7 +40,7 @@ export function Header() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-8 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 max-w-7xl">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -99,13 +99,6 @@ export function Header() {
             >
               <Phone className="h-4 w-4" />
               <span>{COMPANY_INFO.phone}</span>
-            </a>
-            <a
-              href={`mailto:${COMPANY_INFO.email}`}
-              className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors"
-            >
-              <Mail className="h-4 w-4" />
-              <span className="hidden xl:inline">Email Us</span>
             </a>
           </div>
 
