@@ -81,7 +81,7 @@ export function ContactForm() {
   if (isSubmitted) {
     return (
       <section id="contact" className="py-16 lg:py-24 bg-muted/30">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="max-w-2xl mx-auto text-center">
             <Card className="border-2 border-green-200 bg-green-50">
               <CardContent className="p-8 space-y-6">

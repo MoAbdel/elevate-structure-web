@@ -23,7 +23,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center min-h-[80vh] py-12 lg:py-24">
           {/* Content */}
           <div className="flex flex-col justify-center space-y-8">
@@ -152,7 +152,7 @@ export function Hero() {
 
       {/* Trust Indicators Bar */}
       <div className="border-t bg-muted/30">
-        <div className="container px-4 md:px-6 py-6">
+        <div className="container mx-auto px-4 md:px-6 py-6 max-w-7xl">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-center">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-green-500" />

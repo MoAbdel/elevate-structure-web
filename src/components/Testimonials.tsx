@@ -23,7 +23,7 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="py-16 lg:py-24 bg-muted/30">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <Badge variant="outline" className="mb-4">
