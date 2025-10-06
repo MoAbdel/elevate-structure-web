@@ -134,7 +134,7 @@ export function ContactForm() {
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-3">
+        <div className="grid gap-12 lg:grid-cols-3 max-w-7xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>

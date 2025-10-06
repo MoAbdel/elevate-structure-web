@@ -1,7 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import { ArrowRight, CheckCircle, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, Building2, Calculator, Shield, Compass, Ruler, Cog } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { KEYWORDS } from '@/lib/constants'
@@ -113,19 +112,36 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Icon Grid */}
           <div className="relative lg:order-last">
-            <div className="relative overflow-hidden rounded-xl bg-muted">
-              <Image
-                src="/hero-engineering.jpg"
-                alt="Professional engineering team working on structural design plans and architectural blueprints"
-                width={600}
-                height={400}
-                className="object-cover w-full h-[400px] lg:h-[500px]"
-                priority
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Rev//2Q=="
-              />
+            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 p-8">
+              {/* Engineering Icons Grid */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Building2 className="h-8 w-8 text-primary" />
+                  <span className="text-xs font-medium text-center">Structural Design</span>
+                </div>
+                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Calculator className="h-8 w-8 text-primary" />
+                  <span className="text-xs font-medium text-center">Engineering Calc</span>
+                </div>
+                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Shield className="h-8 w-8 text-primary" />
+                  <span className="text-xs font-medium text-center">Safety First</span>
+                </div>
+                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Compass className="h-8 w-8 text-primary" />
+                  <span className="text-xs font-medium text-center">Site Planning</span>
+                </div>
+                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Ruler className="h-8 w-8 text-primary" />
+                  <span className="text-xs font-medium text-center">Precision</span>
+                </div>
+                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Cog className="h-8 w-8 text-primary" />
+                  <span className="text-xs font-medium text-center">Engineering</span>
+                </div>
+              </div>
 
               {/* Floating Elements */}
               <div className="absolute top-4 left-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg">
