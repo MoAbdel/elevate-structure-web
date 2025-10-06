@@ -33,7 +33,7 @@ export function Header() {
       <div className="bg-orange-600 text-white py-2 px-4 text-center text-sm">
         <div className="container mx-auto max-w-7xl flex items-center justify-center gap-2">
           <Flame className="h-4 w-4" />
-          <span>We're providing dedicated support to homeowners affected by the LA wildfires.</span>
+          <span>We&apos;re providing dedicated support to homeowners affected by the LA wildfires.</span>
           <Link href="/fire" className="underline hover:no-underline ml-2 font-medium">
             Learn More
           </Link>

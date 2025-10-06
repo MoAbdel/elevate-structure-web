@@ -38,8 +38,6 @@ export function AnimatedConstructionIcon() {
               {/* Gear teeth */}
               {Array.from({ length: 12 }).map((_, i) => {
                 const angle = (i * 30) * Math.PI / 180
-                const x1 = 60 + Math.cos(angle) * 45
-                const y1 = 60 + Math.sin(angle) * 45
                 const x2 = 60 + Math.cos(angle) * 55
                 const y2 = 60 + Math.sin(angle) * 55
                 return (
@@ -79,8 +77,6 @@ export function AnimatedConstructionIcon() {
               {/* Gear teeth */}
               {Array.from({ length: 8 }).map((_, i) => {
                 const angle = (i * 45) * Math.PI / 180
-                const x1 = 30 + Math.cos(angle) * 20
-                const y1 = 30 + Math.sin(angle) * 20
                 const x2 = 30 + Math.cos(angle) * 28
                 const y2 = 30 + Math.sin(angle) * 28
                 return (
@@ -120,8 +116,6 @@ export function AnimatedConstructionIcon() {
               {/* Gear teeth */}
               {Array.from({ length: 10 }).map((_, i) => {
                 const angle = (i * 36) * Math.PI / 180
-                const x1 = 40 + Math.cos(angle) * 28
-                const y1 = 40 + Math.sin(angle) * 28
                 const x2 = 40 + Math.cos(angle) * 38
                 const y2 = 40 + Math.sin(angle) * 38
                 return (
@@ -161,8 +155,6 @@ export function AnimatedConstructionIcon() {
               {/* Gear teeth */}
               {Array.from({ length: 6 }).map((_, i) => {
                 const angle = (i * 60) * Math.PI / 180
-                const x1 = 22.5 + Math.cos(angle) * 15
-                const y1 = 22.5 + Math.sin(angle) * 15
                 const x2 = 22.5 + Math.cos(angle) * 21
                 const y2 = 22.5 + Math.sin(angle) * 21
                 return (

@@ -45,8 +45,8 @@ export default function FireRecoveryPage() {
                 </h1>
 
                 <p className="max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl mb-8">
-                  We're providing dedicated structural engineering support to homeowners affected by the LA wildfires.
-                  From damage assessment to reconstruction design, we're here to help you rebuild safely and efficiently.
+                  We&apos;re providing dedicated structural engineering support to homeowners affected by the LA wildfires.
+                  From damage assessment to reconstruction design, we&apos;re here to help you rebuild safely and efficiently.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -277,8 +277,8 @@ export default function FireRecoveryPage() {
                   Get Emergency Support Now
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Don't wait - contact us immediately for emergency structural assessment and fire recovery planning.
-                  We're here to help you navigate this challenging time.
+                  Don&apos;t wait - contact us immediately for emergency structural assessment and fire recovery planning.
+                  We&apos;re here to help you navigate this challenging time.
                 </p>
               </div>
             </FadeInSection>

@@ -34,7 +34,7 @@ export function Services() {
 
         {/* Services Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service, index) => (
+          {SERVICES.map((service) => (
             <Card
               key={service.id}
               className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg"

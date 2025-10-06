@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, CheckCircle, Star, Building2, Calculator, Shield, Compass, Ruler, Cog } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, Building2, Calculator, Shield, Compass } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
