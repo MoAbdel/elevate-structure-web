@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, Phone, Mail } from 'lucide-react'
+import { Menu, Phone, Mail, Flame } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { COMPANY_INFO } from '@/lib/constants'
@@ -28,12 +28,48 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <>
+      {/* Wildfire Support Banner */}
+      <div className="bg-orange-600 text-white py-2 px-4 text-center text-sm">
+        <div className="container mx-auto max-w-7xl flex items-center justify-center gap-2">
+          <Flame className="h-4 w-4" />
+          <span>We're providing dedicated support to homeowners affected by the LA wildfires.</span>
+          <Link href="/fire" className="underline hover:no-underline ml-2 font-medium">
+            Learn More
+          </Link>
+        </div>
+      </div>
+
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 max-w-7xl">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">EED</span>
+          <div className="h-8 w-8 flex items-center justify-center">
+            <svg viewBox="0 0 100 100" className="h-8 w-8" fill="none">
+              {/* Building Logo */}
+              <path d="M20 80 L20 45 L35 30 L50 45 L50 80 Z" fill="hsl(var(--primary))" opacity="0.8"/>
+              <path d="M50 80 L50 20 L80 20 L80 80 Z" fill="hsl(var(--primary))"/>
+              {/* Windows */}
+              <rect x="55" y="25" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="65" y="25" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="75" y="25" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="55" y="35" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="65" y="35" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="75" y="35" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="55" y="45" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="65" y="45" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="75" y="45" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="55" y="55" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="65" y="55" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="75" y="55" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="55" y="65" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="65" y="65" width="4" height="4" fill="hsl(var(--background))"/>
+              <rect x="75" y="65" width="4" height="4" fill="hsl(var(--background))"/>
+              {/* House window */}
+              <rect x="25" y="55" width="8" height="8" fill="hsl(var(--primary))" stroke="hsl(var(--background))" strokeWidth="1"/>
+              <line x1="29" y1="55" x2="29" y2="63" stroke="hsl(var(--background))" strokeWidth="1"/>
+              <line x1="25" y1="59" x2="33" y2="59" stroke="hsl(var(--background))" strokeWidth="1"/>
+            </svg>
           </div>
           <span className="font-bold text-lg hidden sm:inline-block">
             {COMPANY_INFO.name}
@@ -136,5 +172,6 @@ export function Header() {
         </div>
       </div>
     </header>
+    </>)
   )
 }

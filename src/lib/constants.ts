@@ -8,9 +8,9 @@ export const COMPANY_INFO = {
   website: 'https://aaaengineeringdesign.com',
   address: {
     streetAddress: '123 Engineering Drive',
-    addressLocality: 'San Francisco',
+    addressLocality: 'Orange County',
     addressRegion: 'CA',
-    postalCode: '94102',
+    postalCode: '92660',
     addressCountry: 'US',
   },
   businessHours: [
@@ -40,11 +40,11 @@ export const KEYWORDS = {
     'engineering solutions',
   ],
   location: [
-    'San Francisco',
-    'Bay Area',
+    'Orange County',
+    'Southern California',
     'California',
-    'SF',
-    'Silicon Valley',
+    'OC',
+    'Newport Beach',
   ],
 }
 
@@ -195,7 +195,7 @@ export const FAQ_DATA = [
   },
   {
     question: 'What areas do you serve?',
-    answer: 'We proudly serve the San Francisco Bay Area, including San Francisco, Oakland, San Jose, and surrounding communities. For projects outside our primary service area, please contact us to discuss availability and potential travel arrangements.',
+    answer: 'We proudly serve Orange County and Southern California, including Newport Beach, Irvine, Costa Mesa, and surrounding communities. For projects outside our primary service area, please contact us to discuss availability and potential travel arrangements.',
   },
   {
     question: 'Do you help with building permits?',
