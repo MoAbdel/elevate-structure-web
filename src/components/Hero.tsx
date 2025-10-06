@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
 import { FadeInSection } from '@/components/FadeInSection'
+import { AnimatedConstructionIcon } from '@/components/AnimatedConstructionIcon'
 import { KEYWORDS } from '@/lib/constants'
 
 export function Hero() {
@@ -125,50 +126,42 @@ export function Hero() {
             </FadeInSection>
           </div>
 
-          {/* Hero Icon Grid */}
+          {/* Animated Construction Icon */}
           <div className="relative lg:order-last">
             <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 p-8">
-              {/* Engineering Icons Grid */}
-              <div className="grid grid-cols-3 gap-6 mb-8">
-                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <Building2 className="h-8 w-8 text-primary" />
-                  <span className="text-xs font-medium text-center">Structural Design</span>
-                </div>
-                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <Calculator className="h-8 w-8 text-primary" />
-                  <span className="text-xs font-medium text-center">Engineering Calc</span>
-                </div>
-                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <Shield className="h-8 w-8 text-primary" />
-                  <span className="text-xs font-medium text-center">Safety First</span>
-                </div>
-                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <Compass className="h-8 w-8 text-primary" />
-                  <span className="text-xs font-medium text-center">Site Planning</span>
-                </div>
-                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <Ruler className="h-8 w-8 text-primary" />
-                  <span className="text-xs font-medium text-center">Precision</span>
-                </div>
-                <div className="flex flex-col items-center space-y-3 p-4 bg-background/80 backdrop-blur rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <Cog className="h-8 w-8 text-primary" />
-                  <span className="text-xs font-medium text-center">Engineering</span>
-                </div>
-              </div>
+              {/* Animated Construction Gears */}
+              <AnimatedConstructionIcon />
 
               {/* Floating Elements */}
-              <div className="absolute top-4 left-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg">
+              <div className="absolute top-4 left-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg z-30">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span className="text-sm font-medium">Licensed & Insured</span>
                 </div>
               </div>
 
-              <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg">
+              <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg z-30">
                 <div className="text-center">
                   <div className="text-lg font-bold text-primary">24hr</div>
                   <div className="text-xs text-muted-foreground">Response Time</div>
                 </div>
+              </div>
+
+              {/* Service Icons around the gears */}
+              <div className="absolute top-8 left-8 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
+                <Building2 className="h-6 w-6 text-primary" />
+              </div>
+
+              <div className="absolute top-16 right-8 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
+                <Calculator className="h-6 w-6 text-accent" />
+              </div>
+
+              <div className="absolute bottom-16 left-16 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
+                <Shield className="h-6 w-6 text-primary" />
+              </div>
+
+              <div className="absolute bottom-8 right-16 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
+                <Compass className="h-6 w-6 text-accent" />
               </div>
             </div>
 

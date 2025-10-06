@@ -119,7 +119,7 @@ export function ContactForm() {
 
   return (
     <section id="contact" className="py-16 lg:py-24 bg-muted/30">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <Badge variant="outline" className="mb-4">
@@ -134,7 +134,7 @@ export function ContactForm() {
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-3 max-w-7xl mx-auto">
+        <div className="grid gap-12 lg:grid-cols-3">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
