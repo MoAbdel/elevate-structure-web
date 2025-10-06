@@ -3,6 +3,8 @@
 import { ArrowRight, CheckCircle, Star, Building2, Calculator, Shield, Compass, Ruler, Cog } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { AnimatedCounter } from '@/components/AnimatedCounter'
+import { FadeInSection } from '@/components/FadeInSection'
 import { KEYWORDS } from '@/lib/constants'
 
 export function Hero() {
@@ -92,24 +94,35 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Social Proof */}
-            <div className="flex items-center gap-6 pt-4">
+            {/* Social Proof with Animated Counters */}
+            <FadeInSection delay={500} className="flex items-center gap-6 pt-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">500+</div>
+                <AnimatedCounter
+                  end={500}
+                  suffix="+"
+                  className="text-2xl font-bold text-primary"
+                />
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">15+</div>
+                <AnimatedCounter
+                  end={15}
+                  suffix="+"
+                  className="text-2xl font-bold text-primary"
+                />
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
                 <div className="flex items-center gap-1">
-                  <span className="text-2xl font-bold text-primary">4.9</span>
+                  <AnimatedCounter
+                    end={4.9}
+                    className="text-2xl font-bold text-primary"
+                  />
                   <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                 </div>
                 <div className="text-sm text-muted-foreground">Client Rating</div>
               </div>
-            </div>
+            </FadeInSection>
           </div>
 
           {/* Hero Icon Grid */}
