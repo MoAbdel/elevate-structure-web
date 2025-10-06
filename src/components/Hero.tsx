@@ -116,7 +116,7 @@ export function Hero() {
               <div className="text-center">
                 <div className="flex items-center gap-1">
                   <AnimatedCounter
-                    end={4.9}
+                    end={5.0}
                     className="text-2xl font-bold text-primary"
                   />
                   <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
