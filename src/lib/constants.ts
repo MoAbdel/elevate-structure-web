@@ -1,11 +1,11 @@
 // Company Information
 export const COMPANY_INFO = {
-  name: 'Elite Engineering Design',
+  name: 'AAA Engineering Design',
   tagline: 'Professional Engineering Design Services',
   description: 'Leading provider of structural engineering, renovation planning, and architectural design services. Transform your vision into reality with our expert engineering solutions.',
-  phone: '+1 (555) 123-4567',
-  email: 'contact@eliteengineering.com',
-  website: 'https://eliteengineering.com',
+  phone: '(949) 981-4448',
+  email: 'aws@aaaengineeringdesign.com',
+  website: 'https://aaaengineeringdesign.com',
   address: {
     streetAddress: '123 Engineering Drive',
     addressLocality: 'San Francisco',
@@ -14,14 +14,14 @@ export const COMPANY_INFO = {
     addressCountry: 'US',
   },
   businessHours: [
-    'Monday-Friday 8:00AM-6:00PM',
-    'Saturday 9:00AM-4:00PM',
+    'Monday-Friday 11:00AM-3:00PM',
+    'Saturday Closed',
     'Sunday Closed',
   ],
   socialProfiles: [
-    'https://www.facebook.com/eliteengineering',
-    'https://www.linkedin.com/company/eliteengineering',
-    'https://twitter.com/eliteengineering',
+    'https://www.facebook.com/aaaengineeringdesign',
+    'https://www.linkedin.com/company/aaaengineeringdesign',
+    'https://twitter.com/aaaengineeringdesign',
   ],
   priceRange: '$$-$$$',
 }
@@ -159,7 +159,7 @@ export const TESTIMONIALS = [
     name: 'Sarah Johnson',
     company: 'Johnson Construction',
     rating: 5,
-    text: 'Elite Engineering Design transformed our renovation project. Their attention to detail and professional expertise made the entire process smooth and successful.',
+    text: 'AAA Engineering Design transformed our renovation project. Their attention to detail and professional expertise made the entire process smooth and successful.',
     image: '/testimonials/sarah-johnson.jpg',
     date: '2024-01-15',
   },
@@ -177,7 +177,7 @@ export const TESTIMONIALS = [
     name: 'Lisa Rodriguez',
     company: 'Rodriguez Architecture',
     rating: 5,
-    text: 'Professional, reliable, and highly skilled. Elite Engineering Design has been our go-to partner for all engineering consultation needs.',
+    text: 'Professional, reliable, and highly skilled. AAA Engineering Design has been our go-to partner for all engineering consultation needs.',
     image: '/testimonials/lisa-rodriguez.jpg',
     date: '2024-02-28',
   },
