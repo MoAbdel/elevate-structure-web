@@ -16,162 +16,113 @@ export function AnimatedConstructionIcon() {
       {/* Main Container */}
       <div className="relative w-72 h-72 flex items-center justify-center">
 
-        {/* Background Circle */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-xl animate-pulse-slow"></div>
+        {/* Background Blueprint Grid */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl overflow-hidden">
+          <svg width="100%" height="100%" className="absolute inset-0 opacity-20">
+            <defs>
+              <pattern id="blueprint-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="hsl(var(--primary))" strokeWidth="0.5" opacity="0.6"/>
+                <circle cx="0" cy="0" r="1" fill="hsl(var(--primary))" opacity="0.4"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#blueprint-grid)" />
+          </svg>
+        </div>
 
-        {/* Large Central Gear */}
+        {/* Central Building Structure */}
         <div className="absolute z-10">
           <svg
-            width="120"
-            height="120"
-            viewBox="0 0 120 120"
-            className="animate-spin-clockwise"
-            style={{ animationDuration: '4s' }}
+            width="160"
+            height="140"
+            viewBox="0 0 160 140"
+            className="animate-float"
           >
             <defs>
-              <linearGradient id="gear1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="building1" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="hsl(var(--primary))" />
-                <stop offset="100%" stopColor="hsl(var(--primary)/0.7)" />
+                <stop offset="100%" stopColor="hsl(var(--primary)/0.8)" />
               </linearGradient>
-            </defs>
-            <g fill="url(#gear1)" stroke="hsl(var(--primary))" strokeWidth="1">
-              {/* Gear teeth */}
-              {Array.from({ length: 12 }).map((_, i) => {
-                const angle = (i * 30) * Math.PI / 180
-                const x2 = 60 + Math.cos(angle) * 55
-                const y2 = 60 + Math.sin(angle) * 55
-                return (
-                  <rect
-                    key={i}
-                    x={x2 - 3}
-                    y={y2 - 8}
-                    width="6"
-                    height="16"
-                    transform={`rotate(${i * 30} ${x2} ${y2})`}
-                  />
-                )
-              })}
-              {/* Center circle */}
-              <circle cx="60" cy="60" r="35" />
-              <circle cx="60" cy="60" r="12" fill="hsl(var(--background))" />
-            </g>
-          </svg>
-        </div>
-
-        {/* Small Gear - Top Right */}
-        <div className="absolute top-4 right-8 z-20">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            className="animate-spin-counter-clockwise"
-            style={{ animationDuration: '3s' }}
-          >
-            <defs>
-              <linearGradient id="gear2" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="hsl(var(--accent))" />
-                <stop offset="100%" stopColor="hsl(var(--accent)/0.7)" />
-              </linearGradient>
-            </defs>
-            <g fill="url(#gear2)" stroke="hsl(var(--accent))" strokeWidth="1">
-              {/* Gear teeth */}
-              {Array.from({ length: 8 }).map((_, i) => {
-                const angle = (i * 45) * Math.PI / 180
-                const x2 = 30 + Math.cos(angle) * 28
-                const y2 = 30 + Math.sin(angle) * 28
-                return (
-                  <rect
-                    key={i}
-                    x={x2 - 2}
-                    y={y2 - 6}
-                    width="4"
-                    height="12"
-                    transform={`rotate(${i * 45} ${x2} ${y2})`}
-                  />
-                )
-              })}
-              {/* Center circle */}
-              <circle cx="30" cy="30" r="18" />
-              <circle cx="30" cy="30" r="6" fill="hsl(var(--background))" />
-            </g>
-          </svg>
-        </div>
-
-        {/* Medium Gear - Bottom Left */}
-        <div className="absolute bottom-6 left-6 z-20">
-          <svg
-            width="80"
-            height="80"
-            viewBox="0 0 80 80"
-            className="animate-spin-clockwise"
-            style={{ animationDuration: '5s' }}
-          >
-            <defs>
-              <linearGradient id="gear3" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="hsl(var(--primary))" />
-                <stop offset="100%" stopColor="hsl(var(--primary)/0.5)" />
-              </linearGradient>
-            </defs>
-            <g fill="url(#gear3)" stroke="hsl(var(--primary))" strokeWidth="1">
-              {/* Gear teeth */}
-              {Array.from({ length: 10 }).map((_, i) => {
-                const angle = (i * 36) * Math.PI / 180
-                const x2 = 40 + Math.cos(angle) * 38
-                const y2 = 40 + Math.sin(angle) * 38
-                return (
-                  <rect
-                    key={i}
-                    x={x2 - 2.5}
-                    y={y2 - 7}
-                    width="5"
-                    height="14"
-                    transform={`rotate(${i * 36} ${x2} ${y2})`}
-                  />
-                )
-              })}
-              {/* Center circle */}
-              <circle cx="40" cy="40" r="25" />
-              <circle cx="40" cy="40" r="8" fill="hsl(var(--background))" />
-            </g>
-          </svg>
-        </div>
-
-        {/* Small Accent Gear - Top Left */}
-        <div className="absolute top-8 left-12 z-15">
-          <svg
-            width="45"
-            height="45"
-            viewBox="0 0 45 45"
-            className="animate-spin-counter-clockwise"
-            style={{ animationDuration: '2.5s' }}
-          >
-            <defs>
-              <linearGradient id="gear4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="building2" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="hsl(var(--accent))" />
                 <stop offset="100%" stopColor="hsl(var(--accent)/0.8)" />
               </linearGradient>
             </defs>
-            <g fill="url(#gear4)" stroke="hsl(var(--accent))" strokeWidth="1">
-              {/* Gear teeth */}
-              {Array.from({ length: 6 }).map((_, i) => {
-                const angle = (i * 60) * Math.PI / 180
-                const x2 = 22.5 + Math.cos(angle) * 21
-                const y2 = 22.5 + Math.sin(angle) * 21
-                return (
-                  <rect
-                    key={i}
-                    x={x2 - 1.5}
-                    y={y2 - 5}
-                    width="3"
-                    height="10"
-                    transform={`rotate(${i * 60} ${x2} ${y2})`}
-                  />
-                )
-              })}
-              {/* Center circle */}
-              <circle cx="22.5" cy="22.5" r="13" />
-              <circle cx="22.5" cy="22.5" r="4" fill="hsl(var(--background))" />
+
+            {/* Foundation/Ground */}
+            <rect x="20" y="120" width="120" height="8" fill="hsl(var(--muted))" />
+
+            {/* Main Building */}
+            <path d="M 40 120 L 40 50 L 80 30 L 120 50 L 120 120 Z" fill="url(#building1)" stroke="hsl(var(--primary))" strokeWidth="1"/>
+
+            {/* Building Windows */}
+            <rect x="50" y="60" width="8" height="8" fill="hsl(var(--background))" />
+            <rect x="65" y="60" width="8" height="8" fill="hsl(var(--background))" />
+            <rect x="50" y="75" width="8" height="8" fill="hsl(var(--background))" />
+            <rect x="65" y="75" width="8" height="8" fill="hsl(var(--background))" />
+            <rect x="50" y="90" width="8" height="8" fill="hsl(var(--background))" />
+            <rect x="65" y="90" width="8" height="8" fill="hsl(var(--background))" />
+            <rect x="50" y="105" width="8" height="8" fill="hsl(var(--background))" />
+            <rect x="65" y="105" width="8" height="8" fill="hsl(var(--background))" />
+
+            {/* Secondary Building */}
+            <rect x="90" y="70" width="25" height="50" fill="url(#building2)" stroke="hsl(var(--accent))" strokeWidth="1"/>
+            <rect x="95" y="80" width="5" height="5" fill="hsl(var(--background))" />
+            <rect x="105" y="80" width="5" height="5" fill="hsl(var(--background))" />
+            <rect x="95" y="90" width="5" height="5" fill="hsl(var(--background))" />
+            <rect x="105" y="90" width="5" height="5" fill="hsl(var(--background))" />
+            <rect x="95" y="100" width="5" height="5" fill="hsl(var(--background))" />
+            <rect x="105" y="100" width="5" height="5" fill="hsl(var(--background))" />
+
+            {/* Construction Crane */}
+            <g className="animate-sway">
+              <line x1="130" y1="120" x2="130" y2="40" stroke="hsl(var(--primary))" strokeWidth="2"/>
+              <line x1="130" y1="50" x2="155" y2="45" stroke="hsl(var(--primary))" strokeWidth="1.5"/>
+              <line x1="130" y1="50" x2="105" y2="55" stroke="hsl(var(--primary))" strokeWidth="1"/>
+              <rect x="150" y="44" width="4" height="4" fill="hsl(var(--accent))" />
             </g>
+          </svg>
+        </div>
+
+        {/* Floating Engineering Tools */}
+        <div className="absolute top-8 right-12 z-20 animate-float-delayed">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="hsl(var(--accent))">
+            {/* T-Square / Ruler */}
+            <rect x="5" y="18" width="30" height="2" fill="hsl(var(--accent))" />
+            <rect x="4" y="12" width="4" height="12" fill="hsl(var(--accent))" />
+            <circle cx="6" cy="20" r="1" fill="hsl(var(--background))" />
+            <circle cx="15" cy="20" r="1" fill="hsl(var(--background))" />
+            <circle cx="25" cy="20" r="1" fill="hsl(var(--background))" />
+          </svg>
+        </div>
+
+        {/* Level Tool - Bottom Left */}
+        <div className="absolute bottom-8 left-8 z-20 animate-float-slow">
+          <svg width="60" height="24" viewBox="0 0 60 24" fill="hsl(var(--primary))">
+            {/* Level Body */}
+            <rect x="0" y="8" width="60" height="8" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="1" rx="2"/>
+            {/* Bubble Vials */}
+            <circle cx="15" cy="12" r="3" fill="hsl(var(--background))" stroke="hsl(var(--primary))" strokeWidth="1"/>
+            <circle cx="30" cy="12" r="3" fill="hsl(var(--background))" stroke="hsl(var(--primary))" strokeWidth="1"/>
+            <circle cx="45" cy="12" r="3" fill="hsl(var(--background))" stroke="hsl(var(--primary))" strokeWidth="1"/>
+            {/* Bubbles */}
+            <circle cx="15" cy="12" r="1" fill="hsl(var(--accent))" className="animate-bounce"/>
+            <circle cx="30" cy="12" r="1" fill="hsl(var(--accent))"/>
+            <circle cx="45" cy="12" r="1" fill="hsl(var(--accent))"/>
+          </svg>
+        </div>
+
+        {/* Compass Tool - Top Left */}
+        <div className="absolute top-12 left-16 z-15 animate-float">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="hsl(var(--accent))">
+            {/* Compass Body */}
+            <circle cx="16" cy="16" r="12" fill="none" stroke="hsl(var(--accent))" strokeWidth="1.5"/>
+            {/* Compass Legs */}
+            <line x1="16" y1="16" x2="16" y2="6" stroke="hsl(var(--accent))" strokeWidth="2"/>
+            <line x1="16" y1="16" x2="22" y2="20" stroke="hsl(var(--accent))" strokeWidth="2"/>
+            {/* Points */}
+            <circle cx="16" cy="6" r="1.5" fill="hsl(var(--accent))"/>
+            <circle cx="22" cy="20" r="1.5" fill="hsl(var(--primary))"/>
+            <circle cx="16" cy="16" r="2" fill="hsl(var(--background))" stroke="hsl(var(--accent))" strokeWidth="1"/>
           </svg>
         </div>
 
@@ -210,49 +161,41 @@ export function AnimatedConstructionIcon() {
       </div>
 
       <style jsx>{`
-        @keyframes spin-clockwise {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        @keyframes spin-counter-clockwise {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(-360deg); }
-        }
-
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 0.4; transform: scale(1); }
-          50% { opacity: 0.6; transform: scale(1.05); }
-        }
-
         @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(5deg); }
+          0%, 100% { transform: translateY(0px) scale(1); }
+          50% { transform: translateY(-8px) scale(1.02); }
         }
 
         @keyframes float-delayed {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-8px) rotate(-5deg); }
+          50% { transform: translateY(-6px) rotate(2deg); }
         }
 
-        .animate-spin-clockwise {
-          animation: spin-clockwise linear infinite;
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-4px) rotate(-1deg); }
         }
 
-        .animate-spin-counter-clockwise {
-          animation: spin-counter-clockwise linear infinite;
-        }
-
-        .animate-pulse-slow {
-          animation: pulse-slow 4s ease-in-out infinite;
+        @keyframes sway {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(2deg); }
         }
 
         .animate-float {
-          animation: float 3s ease-in-out infinite;
+          animation: float 4s ease-in-out infinite;
         }
 
         .animate-float-delayed {
-          animation: float-delayed 3.5s ease-in-out infinite;
+          animation: float-delayed 3s ease-in-out infinite;
+        }
+
+        .animate-float-slow {
+          animation: float-slow 5s ease-in-out infinite;
+        }
+
+        .animate-sway {
+          animation: sway 6s ease-in-out infinite;
+          transform-origin: bottom center;
         }
       `}</style>
     </div>

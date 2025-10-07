@@ -49,8 +49,8 @@ export function Hero() {
                 Services in {KEYWORDS.location[0]}
               </h1>
               <p className="max-w-[600px] text-lg text-muted-foreground sm:text-xl">
-                Transform your vision into reality with expert structural engineering,
-                renovation planning, and architectural design solutions. Licensed PEs
+                Transform your vision into reality with expert structural engineering
+                solutions and professional design services. Licensed PEs
                 with 100% code compliance guarantee.
               </p>
             </div>
