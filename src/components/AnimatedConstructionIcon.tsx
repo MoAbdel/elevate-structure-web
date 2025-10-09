@@ -16,51 +16,96 @@ export function AnimatedConstructionIcon() {
       {/* Main Container */}
       <div className="relative w-72 h-72 flex items-center justify-center">
 
-        {/* Black and White Construction Scene */}
+        {/* Sophisticated Structural Elements */}
         <div className="absolute z-10">
           <svg
-            width="260"
-            height="180"
-            viewBox="0 0 260 180"
+            width="240"
+            height="200"
+            viewBox="0 0 240 200"
             className="animate-float"
           >
-            {/* Ground */}
-            <rect x="0" y="140" width="260" height="40" fill="#333"/>
+            <defs>
+              <linearGradient id="steel1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="hsl(var(--primary))" />
+                <stop offset="100%" stopColor="hsl(var(--primary)/0.7)" />
+              </linearGradient>
+              <linearGradient id="steel2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="hsl(var(--accent))" />
+                <stop offset="100%" stopColor="hsl(var(--accent)/0.7)" />
+              </linearGradient>
+            </defs>
 
-            {/* Dirt pile being moved */}
-            <ellipse cx="180" cy="135" rx="25" ry="8" fill="#666" className="animate-pile-move"/>
+            {/* Central I-Beam (rotating like a cog) */}
+            <g className="animate-rotate-beam" style={{ transformOrigin: '120px 100px' }}>
+              <rect x="110" y="85" width="20" height="30" fill="url(#steel1)" rx="2"/>
+              {/* I-beam flanges */}
+              <rect x="105" y="85" width="30" height="4" fill="url(#steel1)" rx="1"/>
+              <rect x="105" y="111" width="30" height="4" fill="url(#steel1)" rx="1"/>
 
-            {/* Excavator */}
-            <g className="animate-work">
-              {/* Tracks */}
-              <rect x="60" y="125" width="45" height="15" fill="#000" rx="7"/>
-              <circle cx="67" cy="132" r="4" fill="#333"/>
-              <circle cx="78" cy="132" r="4" fill="#333"/>
-              <circle cx="89" cy="132" r="4" fill="#333"/>
-              <circle cx="98" cy="132" r="4" fill="#333"/>
+              {/* Connection bolts (like cog teeth) */}
+              {Array.from({ length: 8 }).map((_, i) => {
+                const angle = (i * 45) * Math.PI / 180
+                const x = 120 + Math.cos(angle) * 25
+                const y = 100 + Math.sin(angle) * 25
+                return (
+                  <circle key={i} cx={x} cy={y} r="3" fill="hsl(var(--primary))" className="animate-pulse-subtle"/>
+                )
+              })}
+            </g>
 
-              {/* Main Body */}
-              <rect x="70" y="105" width="25" height="20" fill="#000" rx="3"/>
+            {/* Interlocking Steel Columns */}
+            <g className="animate-rotate-column" style={{ transformOrigin: '60px 60px' }}>
+              <rect x="55" y="45" width="10" height="30" fill="url(#steel2)" rx="1"/>
+              {/* Column connection points */}
+              {Array.from({ length: 6 }).map((_, i) => {
+                const angle = (i * 60) * Math.PI / 180
+                const x = 60 + Math.cos(angle) * 20
+                const y = 60 + Math.sin(angle) * 20
+                return (
+                  <rect key={i} x={x-2} y={y-6} width="4" height="12" fill="url(#steel2)" rx="1"/>
+                )
+              })}
+              <circle cx="60" cy="60" r="6" fill="hsl(var(--accent))" stroke="hsl(var(--background))" strokeWidth="2"/>
+            </g>
 
-              {/* Cab */}
-              <rect x="85" y="95" width="15" height="18" fill="#000" rx="2"/>
-              <rect x="87" y="97" width="11" height="8" fill="#666" opacity="0.8"/>
+            {/* Rotating Steel Plate Assembly */}
+            <g className="animate-rotate-plate" style={{ transformOrigin: '180px 140px' }}>
+              <rect x="170" y="130" width="20" height="20" fill="url(#steel1)" rx="2"/>
+              {/* Welding points */}
+              {Array.from({ length: 6 }).map((_, i) => {
+                const angle = (i * 60) * Math.PI / 180
+                const x = 180 + Math.cos(angle) * 15
+                const y = 140 + Math.sin(angle) * 15
+                return (
+                  <circle key={i} cx={x} cy={y} r="2" fill="hsl(var(--primary))" className="animate-pulse-subtle"/>
+                )
+              })}
+            </g>
 
-              {/* Boom (animated digging arm) */}
-              <g className="animate-dig">
-                <line x1="95" y1="110" x2="125" y2="85" stroke="#000" strokeWidth="5"/>
-                <line x1="125" y1="85" x2="150" y2="105" stroke="#000" strokeWidth="4"/>
+            {/* Connecting Structural Elements */}
+            <g className="animate-fade-structural">
+              {/* Horizontal beam connections */}
+              <rect x="80" y="98" width="40" height="4" fill="url(#steel2)" rx="1"/>
+              <rect x="140" y="98" width="40" height="4" fill="url(#steel2)" rx="1"/>
 
-                {/* Bucket */}
-                <path d="M150 105 L162 112 L158 125 L145 118 Z" fill="#000"/>
+              {/* Diagonal bracing */}
+              <line x1="75" y1="75" x2="105" y2="85" stroke="url(#steel1)" strokeWidth="3" strokeLinecap="round"/>
+              <line x1="135" y1="85" x2="165" y2="125" stroke="url(#steel1)" strokeWidth="3" strokeLinecap="round"/>
 
-                {/* Dirt in bucket */}
-                <ellipse cx="153" cy="115" rx="6" ry="3" fill="#666" className="animate-dirt-move"/>
-              </g>
+              {/* Connection nodes */}
+              <circle cx="80" cy="100" r="4" fill="hsl(var(--primary))" className="animate-pulse-subtle"/>
+              <circle cx="160" cy="100" r="4" fill="hsl(var(--primary))" className="animate-pulse-subtle"/>
+            </g>
 
-              {/* Hydraulic cylinders */}
-              <line x1="95" y1="110" x2="108" y2="98" stroke="#333" strokeWidth="3"/>
-              <line x1="125" y1="85" x2="132" y2="94" stroke="#333" strokeWidth="2"/>
+            {/* Blueprint Grid Background */}
+            <g className="opacity-10">
+              <defs>
+                <pattern id="blueprint" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="hsl(var(--primary))" strokeWidth="0.5"/>
+                  <circle cx="0" cy="0" r="0.5" fill="hsl(var(--primary))"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#blueprint)" />
             </g>
           </svg>
         </div>
@@ -150,6 +195,42 @@ export function AnimatedConstructionIcon() {
 
         .animate-pulse-subtle {
           animation: pulse-subtle 2s ease-in-out infinite;
+        }
+
+        @keyframes rotate-beam {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(180deg); }
+        }
+
+        @keyframes rotate-column {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(120deg); }
+        }
+
+        @keyframes rotate-plate {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(-90deg); }
+        }
+
+        @keyframes fade-structural {
+          0%, 100% { opacity: 0.8; }
+          50% { opacity: 1; }
+        }
+
+        .animate-rotate-beam {
+          animation: rotate-beam 8s linear infinite;
+        }
+
+        .animate-rotate-column {
+          animation: rotate-column 6s linear infinite;
+        }
+
+        .animate-rotate-plate {
+          animation: rotate-plate 10s linear infinite;
+        }
+
+        .animate-fade-structural {
+          animation: fade-structural 4s ease-in-out infinite;
         }
       `}</style>
     </div>
