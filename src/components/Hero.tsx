@@ -1,11 +1,10 @@
 'use client'
 
-import { ArrowRight, CheckCircle, Star, Building2, Calculator, Shield, Compass } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
 import { FadeInSection } from '@/components/FadeInSection'
-import { AnimatedConstructionIcon } from '@/components/AnimatedConstructionIcon'
 import { KEYWORDS } from '@/lib/constants'
 
 export function Hero() {
@@ -26,11 +25,11 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center min-h-[80vh] py-12 lg:py-24">
-          {/* Content */}
-          <div className="flex flex-col justify-center space-y-8">
+        <div className="flex items-center justify-center min-h-[80vh] py-12 lg:py-24">
+          {/* Centered Content */}
+          <div className="flex flex-col justify-center items-center space-y-8 text-center max-w-4xl">
             {/* Trust Badges */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center">
               <Badge variant="secondary" className="flex items-center gap-1">
                 <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                 Licensed Professional Engineers
@@ -48,7 +47,7 @@ export function Hero() {
                 <span className="text-primary">Engineering Design</span>{' '}
                 Services in {KEYWORDS.location[0]}
               </h1>
-              <p className="max-w-[600px] text-lg text-muted-foreground sm:text-xl">
+              <p className="text-lg text-muted-foreground sm:text-xl">
                 Transform your vision into reality with expert structural engineering
                 solutions and professional design services. Licensed PEs
                 with 100% code compliance guarantee.
@@ -76,7 +75,7 @@ export function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 onClick={scrollToContact}
@@ -96,7 +95,7 @@ export function Hero() {
             </div>
 
             {/* Social Proof with Animated Counters */}
-            <FadeInSection delay={500} className="flex items-center gap-6 pt-4">
+            <FadeInSection delay={500} className="flex items-center justify-center gap-6 pt-4">
               <div className="text-center">
                 <AnimatedCounter
                   end={500}
@@ -124,43 +123,6 @@ export function Hero() {
                 <div className="text-sm text-muted-foreground">Client Rating</div>
               </div>
             </FadeInSection>
-          </div>
-
-          {/* Animated Construction Icon */}
-          <div className="relative lg:order-last">
-            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 p-8">
-              {/* Animated Construction Gears */}
-              <AnimatedConstructionIcon />
-
-              {/* Floating Elements */}
-              <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur rounded-lg p-3 shadow-lg z-30">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary">24hr</div>
-                  <div className="text-xs text-muted-foreground">Response Time</div>
-                </div>
-              </div>
-
-              {/* Service Icons around the gears */}
-              <div className="absolute top-8 left-8 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
-                <Building2 className="h-6 w-6 text-primary" />
-              </div>
-
-              <div className="absolute top-16 right-8 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
-                <Calculator className="h-6 w-6 text-accent" />
-              </div>
-
-              <div className="absolute bottom-16 left-16 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
-                <Shield className="h-6 w-6 text-primary" />
-              </div>
-
-              <div className="absolute bottom-8 right-16 bg-background/80 backdrop-blur rounded-lg p-2 shadow-sm z-25">
-                <Compass className="h-6 w-6 text-accent" />
-              </div>
-            </div>
-
-            {/* Background Pattern */}
-            <div className="absolute -top-4 -right-4 w-72 h-72 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -bottom-8 -left-8 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10"></div>
           </div>
         </div>
       </div>
