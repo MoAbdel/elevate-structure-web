@@ -83,7 +83,34 @@ export function Benefits() {
             </p>
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Mobile-friendly comparison cards */}
+          <div className="md:hidden space-y-4">
+            {[
+              { feature: "Response Time", us: "24 hours", them: "3-5 days" },
+              { feature: "Project Timeline", us: "2-4 weeks", them: "6-8 weeks" },
+              { feature: "Licensed Engineers", us: "100% PE Licensed", them: "Mixed Team" },
+              { feature: "Code Compliance", us: "100% Guaranteed", them: "Best Effort" },
+              { feature: "Emergency Service", us: "Same Day", them: "Not Available" },
+              { feature: "Satisfaction Guarantee", us: "100% Money Back", them: "Limited" },
+            ].map((item, index) => (
+              <div key={index} className="bg-background rounded-lg p-4 border">
+                <h4 className="font-semibold mb-3 text-center">{item.feature}</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-xs text-muted-foreground mb-1">{COMPANY_INFO.name}</div>
+                    <div className="text-sm font-medium text-green-600">{item.us}</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs text-muted-foreground mb-1">Typical Competitor</div>
+                    <div className="text-sm text-muted-foreground">{item.them}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop table */}
+          <div className="hidden md:block">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b">
@@ -158,7 +185,7 @@ export function Benefits() {
 
         {/* Credentials Section */}
         <div className="grid gap-8 md:grid-cols-2 items-center mb-16">
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
             <h3 className="text-2xl font-bold">
               Licensed & Certified Professionals
             </h3>
@@ -169,26 +196,26 @@ export function Benefits() {
               to ensure we meet all industry standards.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">California Professional Engineer (PE) Licensed</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">Structural Engineering Institute (SEI) Member</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">American Society of Civil Engineers (ASCE) Member</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">Fully Insured & Bonded ($2M Professional Liability)</span>
               </div>
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
             <h3 className="text-2xl font-bold">
               Our Commitment to Excellence
             </h3>
@@ -198,19 +225,19 @@ export function Benefits() {
               or provide a full refund. Your success is our success.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">100% Satisfaction Guarantee</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">Free Revisions Until You&apos;re Happy</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">30-Day Money Back Guarantee</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium">Lifetime Technical Support</span>
               </div>
