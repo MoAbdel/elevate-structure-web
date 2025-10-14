@@ -41,9 +41,9 @@ export function Header() {
       </div>
 
       <header className="sticky top-8 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 max-w-7xl">
+      <div className="container mx-auto flex h-16 items-center justify-center gap-8 px-4 md:px-6 max-w-5xl">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-1">
           <div className="h-8 w-12 flex items-center justify-center">
             <svg viewBox="0 0 120 100" className="h-8 w-12" fill="none">
               <defs>
@@ -99,7 +99,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-4">
           {navigation.map((item) => (
             <button
               key={item.name}
@@ -114,7 +114,7 @@ export function Header() {
         {/* Contact Info & CTA */}
         <div className="flex items-center space-x-2">
           {/* Phone Number (Desktop) */}
-          <div className="hidden lg:flex items-center space-x-4 mr-4">
+          <div className="hidden lg:flex items-center space-x-2 mr-2">
             <a
               href={`tel:${COMPANY_INFO.phone}`}
               className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors"
