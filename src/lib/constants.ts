@@ -87,7 +87,7 @@ export const SERVICES = [
   {
     id: 'building-analysis',
     title: 'Building Analysis',
-    description: 'Comprehensive building performance analysis including energy efficiency, structural integrity, and code compliance assessments.',
+    description: 'Comprehensive building performance analysis including structural integrity and code compliance assessments.',
     icon: '📊',
     features: [
       'Structural assessments',
