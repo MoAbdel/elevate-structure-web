@@ -44,8 +44,8 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 max-w-7xl">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 flex items-center justify-center">
-            <svg viewBox="0 0 120 100" className="h-8 w-8" fill="none">
+          <div className="h-8 w-12 flex items-center justify-center">
+            <svg viewBox="0 0 120 100" className="h-8 w-12" fill="none">
               <defs>
                 <linearGradient id="houseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#f5e6b3" />
