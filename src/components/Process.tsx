@@ -113,7 +113,7 @@ export function Process() {
               <CheckCircle className="h-8 w-8 text-green-500 mx-auto" />
               <h4 className="font-semibold">Fast Turnaround</h4>
               <p className="text-sm text-muted-foreground">
-                Most projects completed within 2-4 weeks
+                Most projects completed within 1-2 weeks
               </p>
             </div>
             <div className="space-y-2">
