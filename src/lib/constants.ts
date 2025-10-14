@@ -2,7 +2,7 @@
 export const COMPANY_INFO = {
   name: 'AAA Engineering Design',
   tagline: 'Professional Engineering Design Services',
-  description: 'Leading provider of structural engineering, renovation planning, and architectural design services. Transform your vision into reality with our expert engineering solutions.',
+  description: 'Leading provider of structural engineering services. Transform your vision into reality with our expert engineering solutions.',
   phone: '(949) 981-4448',
   email: 'aws@aaaengineeringdesign.com',
   website: 'https://aaaengineeringdesign.com',
@@ -31,8 +31,6 @@ export const KEYWORDS = {
   primary: 'engineering design services',
   secondary: [
     'structural engineering',
-    'renovation planning',
-    'architectural design',
     'engineering consultation',
     'building design',
     'construction planning',
@@ -60,30 +58,6 @@ export const SERVICES = [
       'Foundation design',
       'Seismic retrofitting',
       'Code compliance review',
-    ],
-  },
-  {
-    id: 'renovation-planning',
-    title: 'Renovation Planning',
-    description: 'Transform your space with professional renovation planning. From concept to completion, we provide detailed plans that maximize functionality and aesthetic appeal.',
-    icon: '🏠',
-    features: [
-      'Space optimization',
-      'Permit assistance',
-      '3D visualization',
-      'Cost estimation',
-    ],
-  },
-  {
-    id: 'architectural-design',
-    title: 'Architectural Design',
-    description: 'Innovative architectural solutions that blend form and function. Our designs prioritize sustainability, efficiency, and modern aesthetic principles.',
-    icon: '📐',
-    features: [
-      'Custom design solutions',
-      'Sustainable architecture',
-      'Building information modeling',
-      'Design-build coordination',
     ],
   },
   {
@@ -116,7 +90,6 @@ export const SERVICES = [
     description: 'Comprehensive building performance analysis including energy efficiency, structural integrity, and code compliance assessments.',
     icon: '📊',
     features: [
-      'Energy efficiency audits',
       'Structural assessments',
       'Code compliance checks',
       'Performance optimization',
@@ -187,15 +160,15 @@ export const TESTIMONIALS = [
 export const FAQ_DATA = [
   {
     question: 'How much do engineering design services cost?',
-    answer: 'Our engineering design services are competitively priced based on project scope and complexity. We offer free initial consultations and provide detailed cost estimates after assessing your specific requirements. Typical projects range from $2,500 to $15,000 depending on size and complexity.',
+    answer: 'Our engineering design services are competitively priced based on project scope and complexity. We offer free initial consultations and provide detailed cost estimates after assessing your specific requirements. Typical projects range from $1,000 to $10,000 depending on size and complexity.',
   },
   {
     question: 'How long does the engineering design process take?',
-    answer: 'Project timelines vary based on complexity and scope. Simple residential projects typically take 2-4 weeks, while larger commercial projects may require 6-12 weeks. We provide detailed timelines during our initial consultation and keep you updated throughout the process.',
+    answer: 'Project timelines vary based on complexity and scope. Simple residential projects typically take 1-2 weeks, while larger commercial projects may require 6-12 weeks. We provide detailed timelines during our initial consultation and keep you updated throughout the process.',
   },
   {
     question: 'What areas do you serve?',
-    answer: 'We proudly serve Orange County and Southern California, including Newport Beach, Irvine, Costa Mesa, and surrounding communities. For projects outside our primary service area, please contact us to discuss availability and potential travel arrangements.',
+    answer: 'We proudly serve all of California, including Orange County, Los Angeles, San Diego, San Francisco, and all surrounding communities. For projects outside California, please contact us to discuss availability and potential travel arrangements.',
   },
   {
     question: 'Do you help with building permits?',
@@ -230,9 +203,9 @@ export const BENEFITS = [
   },
   {
     title: 'Fast Turnaround Times',
-    description: 'We understand project deadlines. Most engineering plans are completed within 2-4 weeks.',
+    description: 'We understand project deadlines. Most engineering plans are completed within 1-2 weeks.',
     icon: '⚡',
-    stat: '2-4 Weeks',
+    stat: '1-2 Weeks',
     statLabel: 'Typical Delivery',
   },
   {
@@ -254,8 +227,6 @@ export const BENEFITS = [
 // Contact Form Options
 export const SERVICE_OPTIONS = [
   'Structural Engineering',
-  'Renovation Planning',
-  'Architectural Design',
   'Engineering Consultation',
   'Construction Support',
   'Building Analysis',

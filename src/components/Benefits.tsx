@@ -87,11 +87,10 @@ export function Benefits() {
           <div className="md:hidden space-y-4">
             {[
               { feature: "Response Time", us: "24 hours", them: "3-5 days" },
-              { feature: "Project Timeline", us: "2-4 weeks", them: "6-8 weeks" },
+              { feature: "Project Timeline", us: "1-2 weeks", them: "6-8 weeks" },
               { feature: "Licensed Engineers", us: "100% PE Licensed", them: "Mixed Team" },
               { feature: "Code Compliance", us: "100% Guaranteed", them: "Best Effort" },
               { feature: "Emergency Service", us: "Same Day", them: "Not Available" },
-              { feature: "Satisfaction Guarantee", us: "100% Money Back", them: "Limited" },
             ].map((item, index) => (
               <div key={index} className="bg-background rounded-lg p-4 border">
                 <h4 className="font-semibold mb-3 text-center">{item.feature}</h4>
@@ -136,7 +135,7 @@ export function Benefits() {
                 <tr className="border-b border-muted">
                   <td className="py-3 px-4">Project Timeline</td>
                   <td className="text-center py-3 px-4 text-green-600 font-medium">
-                    2-4 weeks
+                    1-2 weeks
                   </td>
                   <td className="text-center py-3 px-4 text-muted-foreground">
                     6-8 weeks
@@ -160,22 +159,13 @@ export function Benefits() {
                     Best Effort
                   </td>
                 </tr>
-                <tr className="border-b border-muted">
+                <tr>
                   <td className="py-3 px-4">Emergency Service</td>
                   <td className="text-center py-3 px-4 text-green-600 font-medium">
                     Same Day
                   </td>
                   <td className="text-center py-3 px-4 text-muted-foreground">
                     Not Available
-                  </td>
-                </tr>
-                <tr>
-                  <td className="py-3 px-4">Satisfaction Guarantee</td>
-                  <td className="text-center py-3 px-4 text-green-600 font-medium">
-                    100% Money Back
-                  </td>
-                  <td className="text-center py-3 px-4 text-muted-foreground">
-                    Limited
                   </td>
                 </tr>
               </tbody>
