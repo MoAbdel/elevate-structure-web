@@ -185,7 +185,7 @@ export function RecentProjects() {
               </h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 From concept to completion, we deliver structural engineering solutions
-                that exceed expectations. Let's discuss your project requirements.
+                that exceed expectations. Let&apos;s discuss your project requirements.
               </p>
             </div>
 
