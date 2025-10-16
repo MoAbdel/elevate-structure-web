@@ -4,6 +4,7 @@ import { Services } from '@/components/Services'
 import { Process } from '@/components/Process'
 import { Benefits } from '@/components/Benefits'
 import { Testimonials } from '@/components/Testimonials'
+import { RecentProjects } from '@/components/RecentProjects'
 import { FAQ } from '@/components/FAQ'
 import { ContactForm } from '@/components/ContactForm'
 import { Footer } from '@/components/Footer'
@@ -20,6 +21,7 @@ export default function Home() {
         <Process />
         <Benefits />
         <Testimonials />
+        <RecentProjects />
         <FAQ />
         <ContactForm />
       </main>
