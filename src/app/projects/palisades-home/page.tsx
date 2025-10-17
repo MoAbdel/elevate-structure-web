@@ -301,16 +301,15 @@ export default function PalisadesHomePage() {
                   <p className="text-sm mb-4 opacity-90">
                     Get expert engineering for your premium residential project with custom structural solutions.
                   </p>
-                  <Button
-                    variant="secondary"
-                    className="w-full"
-                    onClick={() => {
-                      window.location.href = '/#contact'
-                    }}
-                  >
-                    <Phone className="mr-2 h-4 w-4" />
-                    Schedule Consultation
-                  </Button>
+                  <Link href="/#contact">
+                    <Button
+                      variant="secondary"
+                      className="w-full"
+                    >
+                      <Phone className="mr-2 h-4 w-4" />
+                      Schedule Consultation
+                    </Button>
+                  </Link>
                   <div className="mt-4 pt-4 border-t border-primary-foreground/20 text-center">
                     <a
                       href={`tel:${COMPANY_INFO.phone}`}
