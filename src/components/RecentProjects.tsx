@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { FadeInSection } from '@/components/FadeInSection'
@@ -8,6 +9,7 @@ import { ArrowRight, Building, Home, TreePine } from 'lucide-react'
 const RECENT_PROJECTS = [
   {
     id: 1,
+    slug: 'cmu-warehouse-mezzanine',
     title: 'CMU Warehouse Mezzanine',
     location: 'Industrial District, CA',
     description: 'Designed and engineered a 2-story steel mezzanine structure within an existing CMU warehouse, maximizing vertical storage capacity while maintaining structural integrity.',
@@ -29,6 +31,7 @@ const RECENT_PROJECTS = [
   },
   {
     id: 2,
+    slug: '3-story-residential-home',
     title: '3-Story Residential Home',
     location: 'Orange County, CA',
     description: 'Complete structural engineering for a custom 3-story residential home featuring complex wood framing systems and modern architectural elements.',
@@ -50,6 +53,7 @@ const RECENT_PROJECTS = [
   },
   {
     id: 3,
+    slug: 'palisades-home',
     title: 'Palisades Residential Complex',
     location: 'Pacific Palisades, CA',
     description: 'Engineered a 2-story luxury home with innovative wood framing and an architectural steel canopy entrance feature for enhanced curb appeal.',
@@ -159,12 +163,15 @@ export function RecentProjects() {
                       </ul>
                     </div>
 
-                    {/* View Project Link (placeholder for future) */}
+                    {/* View Project Link */}
                     <div className="pt-4">
-                      <button className="w-full flex items-center justify-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group">
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        className="w-full flex items-center justify-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group"
+                      >
                         View Project Details
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      </Link>
                     </div>
                   </div>
 
