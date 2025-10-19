@@ -55,7 +55,7 @@ export function Hero() {
             </div>
 
             {/* Key Benefits */}
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col items-center">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />
                 <span className="text-sm font-medium">Free consultation & quote within 24 hours</span>

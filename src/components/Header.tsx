@@ -83,7 +83,7 @@ export function Header() {
           {/* Primary CTA */}
           <Button
             onClick={() => scrollToSection('#contact')}
-            className="hidden sm:inline-flex"
+            className="hidden sm:inline-flex ml-8"
           >
             Get Free Consultation
           </Button>
