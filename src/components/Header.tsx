@@ -70,7 +70,7 @@ export function Header() {
         {/* Contact Info & CTA */}
         <div className="flex items-center space-x-2">
           {/* Phone Number (Desktop) */}
-          <div className="hidden lg:flex items-center space-x-2 mr-2">
+          <div className="hidden lg:flex items-center space-x-2">
             <a
               href={`tel:${COMPANY_INFO.phone}`}
               className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors whitespace-nowrap"
