@@ -1,16 +1,17 @@
 // Company Information
 export const COMPANY_INFO = {
   name: 'AAA Engineering Design',
-  tagline: 'Professional Engineering Design Services',
+  tagline: 'Structural Consulting & Design',
+  subtitle: 'Commercial & Residential',
   description: 'Leading provider of structural engineering services. Transform your vision into reality with our expert engineering solutions.',
   phone: '(949) 981-4448',
   email: 'aws@aaaengineeringdesign.com',
   website: 'https://aaaengineeringdesign.com',
   address: {
-    streetAddress: '123 Engineering Drive',
-    addressLocality: 'Orange County',
+    streetAddress: '8031 Main Street',
+    addressLocality: 'Stanton',
     addressRegion: 'CA',
-    postalCode: '92660',
+    postalCode: '90680',
     addressCountry: 'US',
   },
   businessHours: [

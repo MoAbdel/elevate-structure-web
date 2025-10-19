@@ -49,7 +49,7 @@ export function Header() {
             alt={COMPANY_INFO.name}
             className="h-10 md:h-12 w-auto"
           />
-          <span className="font-bold text-lg hidden sm:inline-block">
+          <span className="font-bold text-lg hidden sm:inline-block whitespace-nowrap">
             {COMPANY_INFO.name}
           </span>
         </Link>
@@ -73,7 +73,7 @@ export function Header() {
           <div className="hidden lg:flex items-center space-x-2 mr-2">
             <a
               href={`tel:${COMPANY_INFO.phone}`}
-              className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors"
+              className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors whitespace-nowrap"
             >
               <Phone className="h-4 w-4" />
               <span>{COMPANY_INFO.phone}</span>
