@@ -105,43 +105,45 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80">
-              <div className="flex flex-col space-y-6 mt-6">
-                {/* Mobile Navigation Links */}
-                <nav className="flex flex-col space-y-4">
-                  {navigation.map((item) => (
-                    <button
-                      key={item.name}
-                      onClick={() => scrollToSection(item.href)}
-                      className="text-left text-base font-medium transition-colors hover:text-primary"
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-                </nav>
+            <SheetContent side="right" className="w-[85vw] max-w-sm p-6">
+              <div className="flex flex-col h-full justify-between py-6">
+                <div className="flex flex-col space-y-8">
+                  {/* Mobile Navigation Links */}
+                  <nav className="flex flex-col space-y-5">
+                    {navigation.map((item) => (
+                      <button
+                        key={item.name}
+                        onClick={() => scrollToSection(item.href)}
+                        className="text-left text-lg font-medium transition-colors hover:text-primary"
+                      >
+                        {item.name}
+                      </button>
+                    ))}
+                  </nav>
 
-                {/* Mobile Contact Info */}
-                <div className="border-t pt-6 space-y-4">
-                  <a
-                    href={`tel:${COMPANY_INFO.phone}`}
-                    className="flex items-center space-x-2 text-base font-medium hover:text-primary transition-colors"
-                  >
-                    <Phone className="h-5 w-5" />
-                    <span>{COMPANY_INFO.phone}</span>
-                  </a>
-                  <a
-                    href={`mailto:${COMPANY_INFO.email}`}
-                    className="flex items-center space-x-2 text-base font-medium hover:text-primary transition-colors"
-                  >
-                    <Mail className="h-5 w-5" />
-                    <span>{COMPANY_INFO.email}</span>
-                  </a>
+                  {/* Mobile Contact Info */}
+                  <div className="border-t pt-6 space-y-4">
+                    <a
+                      href={`tel:${COMPANY_INFO.phone}`}
+                      className="flex items-center space-x-3 text-base font-medium hover:text-primary transition-colors"
+                    >
+                      <Phone className="h-5 w-5 flex-shrink-0" />
+                      <span className="break-all">{COMPANY_INFO.phone}</span>
+                    </a>
+                    <a
+                      href={`mailto:${COMPANY_INFO.email}`}
+                      className="flex items-center space-x-3 text-base font-medium hover:text-primary transition-colors"
+                    >
+                      <Mail className="h-5 w-5 flex-shrink-0" />
+                      <span className="break-all text-sm">{COMPANY_INFO.email}</span>
+                    </a>
+                  </div>
                 </div>
 
                 {/* Mobile CTA */}
                 <Button
                   onClick={() => scrollToSection('#contact')}
-                  className="w-full"
+                  className="w-full mt-6"
                   size="lg"
                 >
                   Get Free Consultation
