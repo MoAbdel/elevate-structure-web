@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import { ServiceCategories } from '@/components/ServiceCategories'
 import { Services } from '@/components/Services'
 import { Process } from '@/components/Process'
 import { Benefits } from '@/components/Benefits'
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <ServiceCategories />
         <Services />
         <Process />
         <Benefits />
