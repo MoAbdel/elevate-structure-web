@@ -41,21 +41,30 @@ export function Header() {
       </div>
 
       <header className="sticky top-8 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-center gap-8 px-4 md:px-6 max-w-5xl">
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 mr-8">
-          <img
-            src="/AAA-Logo.png"
-            alt={COMPANY_INFO.name}
-            className="h-10 md:h-12 w-auto"
-          />
-          <span className="font-bold text-lg hidden sm:inline-block whitespace-nowrap">
-            {COMPANY_INFO.name}
+      <div className="container mx-auto flex h-16 items-center px-4 md:px-6 max-w-5xl relative">
+        {/* Mobile: Logo on left */}
+        <div className="flex items-center md:mr-8">
+          <Link href="/" className="flex items-center space-x-2">
+            <img
+              src="/AAA-Logo.png"
+              alt={COMPANY_INFO.name}
+              className="h-10 md:h-12 w-auto"
+            />
+            <span className="font-bold text-lg hidden md:inline-block whitespace-nowrap">
+              {COMPANY_INFO.name}
+            </span>
+          </Link>
+        </div>
+
+        {/* Mobile: Centered business name */}
+        <div className="absolute left-1/2 -translate-x-1/2 md:hidden">
+          <span className="font-bold text-base whitespace-nowrap">
+            AAA Engineering Design
           </span>
-        </Link>
+        </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-4">
+        <nav className="hidden md:flex items-center space-x-4 flex-1">
           {navigation.map((item) => (
             <button
               key={item.name}
@@ -68,7 +77,7 @@ export function Header() {
         </nav>
 
         {/* Contact Info & CTA */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 ml-auto">
           {/* Phone Number (Desktop) */}
           <div className="hidden lg:flex items-center space-x-2">
             <a
